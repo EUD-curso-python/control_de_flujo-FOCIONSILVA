@@ -1,4 +1,7 @@
 
+
+#  python control_de_flujo.py
+
 """Guarde en lista `naturales` los primeros 100 números naturales (desde el 1) 
 usando el bucle while
 """
@@ -17,13 +20,13 @@ while i <= n:
 Hasta el número 50.
 """
 elemento = '1'
-acumulado = list('1')
-for i in range(2, 5, 1):
+acumulado = []
+for i in range(2, 52, 1):
   acumulado.append(elemento)
   elemento = elemento + ' '  + str(i)
   #acumulado.append(elemento)
 #print(acumulado)
-print(acumulado)
+
 
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
 """
@@ -72,7 +75,10 @@ for el in lista1:
 ]
 """
 
-
+for i in range(50,0,-1):
+  regresivo50 = list(range(i, 0, -1))
+  regresivo50 = "".join(str(regresivo50))
+  print (regresivo50)
 
 
 
