@@ -3,8 +3,12 @@
 usando el bucle while
 """
 
-
-
+naturales = []
+n = 100
+i = 1
+while i <= n:
+  naturales.append(i)
+  i=i+1
 
 """Guarde en `acumulado` una lista con el siguiente patrón:
 
@@ -12,17 +16,21 @@ usando el bucle while
 
 Hasta el número 50.
 """
-
-
-
+elemento = '1'
+acumulado = list('1')
+for i in range(2, 5, 1):
+  acumulado.append(elemento)
+  elemento = elemento + ' '  + str(i)
+  #acumulado.append(elemento)
+#print(acumulado)
+print(acumulado)
 
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
 """
 
-
-
-
-
+suma100 = 0
+for i in range(1,101):
+  suma100 = suma100 + i
 
 """Guarde en `tabla100` un string con los primeros 10 múltiplos del número 134, 
 separados por coma, así:
@@ -30,19 +38,23 @@ separados por coma, así:
 '134,268,...'
 
 """
+tabla100 = ''
+for i in range(1,11):
+  if i <= 9:
+    tabla100 = tabla100 + str(i*134) + ','
+  else:
+    tabla100 = tabla100 + str(i*134) 
 
 
-
-
-
-"""Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
-menores o iguales a 300 en la lista `lista1` que se define a continuación (la lista 
+"""Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y menores  a 300 en la lista `lista1` que se define a continuación (la lista 
 está ordenada).
 """
 lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
-
-
+multiplos3 = 0
+for el in lista1:
+  if el % 3 == 0 and el < 300:
+    multiplos3 += 1
 
 
 """Guardar en `regresivo50` una lista con la cuenta regresiva desde el número 
