@@ -82,7 +82,8 @@ for i in range(50,0,-1):
     cadena = cadena + espacio + str(j)
     espacio = ' '
   regresivo50.append(cadena)
-print(regresivo50)
+
+
 
 """Invierta la siguiente lista usando el bucle for y guarde el resultado en 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
@@ -182,6 +183,8 @@ for i in range (1,11):
 
 """Guardar en un string llamado `patron` el siguiente patrón llegando a una 
 cantidad máxima de asteriscos de 30. 
+
+
 *
 **
 ***
@@ -199,12 +202,13 @@ cantidad máxima de asteriscos de 30.
 ***
 **
 *
-"""
 
+
+"""
 patron = ''
 for i in range (1,31):
   patron = patron + ('*'*i+'\n')
-for i in range (29,0,-1):
+for i in range (29,1,-1):
   patron = patron + ('*'*i+'\n')
-#print(patron)
-
+patron = patron  + '*'
+print(patron)
