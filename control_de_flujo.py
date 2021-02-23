@@ -75,10 +75,10 @@ for el in lista1:
 ]
 """
 
-for i in range(50,0,-1):
+for i in range(20,0,-1):
   regresivo50 = list(range(i, 0, -1))
-  regresivo50 = "".join(str(regresivo50))
-  print (regresivo50)
+  regresivo51 = "\'".join(str(regresivo50))
+  #print (regresivo51)
 
 
 
@@ -88,10 +88,15 @@ for i in range(50,0,-1):
 """
 lista2 = list(range(1, 70, 5))
 
+print (lista2)
 
-
-
-
+invertido = []
+largo = len(lista2)-1
+print(largo)
+for i in range(largo,-1,-1) :
+  invertido.append(lista2[i])
+  print(lista2[i])
+print (invertido)
 """Guardar en `primos` una lista con todos los números primos desde el 37 al 300
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
 otros números enteros.
@@ -109,9 +114,18 @@ del segundo cada uno se calcula sumando los dos anteriores términos de la serie
 [0, 1, 1, 2, 3, 5, 8, ...]
 
 """
+fibonacci = []
+x = 0
+y = 1
+fibonacci.append(0)
+fibonacci.append(1)
+for j in range (1,59,1):
+  suma = x + y
+  fibonacci.append(suma)
+  x = y
+  y = suma
 
-
-
+print(fibonacci)
 
 
 """Guardar en `factorial` el factorial de 30
@@ -123,7 +137,9 @@ Por ejemplo, el factorial de 5 se calcula así:
 5! = 5 × 4 × 3 × 2 × 1 = 120
 """
 
-
+factorial = 1
+for i in range (1,31):
+  
 
 
 
