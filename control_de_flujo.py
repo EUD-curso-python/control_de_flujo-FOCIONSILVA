@@ -100,10 +100,18 @@ for i in range(largo,-1,-1) :
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
 otros números enteros.
 """
+primos = []
 
+for i in range(37,301):
+  esprimo = True
+  for j in range (2,i-1):
+    #print(i, ' ',  i%j)
+    if i % j == 0 :
+      esprimo = False
+  if esprimo:
+    primos.append(i)
 
-
-
+print(primos)
 
 """Guardar en `fibonacci` una lista con los primeros 60 términos de la serie de 
 Fibonacci.
@@ -170,9 +178,8 @@ y guardar resultado en variable `suma_2s`
 suma_2s=0
 for i in range (1,11):
   numero = int('2'* i)
-  print (numero)
   suma_2s = suma_2s + numero
-print (suma_2s)
+
 
 """Guardar en un string llamado `patron` el siguiente patrón llegando a una 
 cantidad máxima de asteriscos de 30. 
@@ -195,6 +202,10 @@ cantidad máxima de asteriscos de 30.
 *
 """
 
-
-
+patron = ''
+for i in range (1,31):
+  patron = patron + ('*'*i+'\n')
+for i in range (29,0,-1):
+  patron = patron + ('*'*i+'\n')
+#print(patron)
 
