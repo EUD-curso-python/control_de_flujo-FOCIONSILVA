@@ -88,15 +88,14 @@ for i in range(20,0,-1):
 """
 lista2 = list(range(1, 70, 5))
 
-print (lista2)
+#print (lista2)
 
 invertido = []
 largo = len(lista2)-1
-print(largo)
 for i in range(largo,-1,-1) :
   invertido.append(lista2[i])
-  print(lista2[i])
-print (invertido)
+  ##print(lista2[i])
+#print (invertido)
 """Guardar en `primos` una lista con todos los números primos desde el 37 al 300
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
 otros números enteros.
@@ -125,7 +124,6 @@ for j in range (1,59,1):
   x = y
   y = suma
 
-print(fibonacci)
 
 
 """Guardar en `factorial` el factorial de 30
@@ -139,8 +137,7 @@ Por ejemplo, el factorial de 5 se calcula así:
 
 factorial = 1
 for i in range (1,31):
-  
-
+  factorial  = factorial * i
 
 
 """Guarde en lista `pares` los elementos de la siguiente lista que esten 
@@ -149,26 +146,33 @@ presentes en posiciones pares, pero solo hasta la posición 80.
 
 lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 512, 19, 674, 142, 272, 773, 859, 598, 898, 930, 119, 107, 798, 447, 348, 402, 33, 678, 460, 144, 168, 290, 929, 254, 233, 563, 48, 249, 890, 871, 484, 265, 831, 694, 366, 499, 271, 123, 870, 986, 449, 894, 347, 346, 519, 969, 242, 57, 985, 250, 490, 93, 999, 373, 355, 466, 416, 937, 214, 707, 834, 126, 698, 268, 217, 406, 334, 285, 429, 130, 393, 396, 936, 572, 688, 765, 404, 970, 159, 98, 545, 412, 629, 361, 70, 602]
 
-
-
-
+pares = []
+i = -1
+for el in lista3:
+  i = i+1
+  numero = int(el)
+  if i % 2 == 0 and i <= 80 :
+    pares.append(el)
 
 
 """Guarde en lista `cubos` el cubo (potencia elevada a la 3) de los números del 
 1 al 100. 
 """
 
-
-
+cubos = []
+for i in range (1,101):
+  cubos.append(i*i*i)
 
 
 """Encuentre la suma de la serie 2 +22 + 222 + 2222 + .. hasta sumar 10 términos 
 y guardar resultado en variable `suma_2s` 
 """
-
-
-
-
+suma_2s=0
+for i in range (1,11):
+  numero = int('2'* i)
+  print (numero)
+  suma_2s = suma_2s + numero
+print (suma_2s)
 
 """Guardar en un string llamado `patron` el siguiente patrón llegando a una 
 cantidad máxima de asteriscos de 30. 
