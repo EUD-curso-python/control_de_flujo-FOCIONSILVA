@@ -24,7 +24,6 @@ acumulado = []
 for i in range(2, 52, 1):
   acumulado.append(elemento)
   elemento = elemento + ' '  + str(i)
-  #acumulado.append(elemento)
 #print(acumulado)
 
 
@@ -74,14 +73,16 @@ for el in lista1:
   '1'
 ]
 """
-
-for i in range(20,0,-1):
-  regresivo50 = list(range(i, 0, -1))
-  regresivo51 = "\'".join(str(regresivo50))
-  #print (regresivo51)
-
-
-
+espacio = ''
+regresivo50 = []
+for i in range(50,0,-1):
+  cadena = ''
+  espacio = ''
+  for j in range(i,0,-1):
+    cadena = cadena + espacio + str(j)
+    espacio = ' '
+  regresivo50.append(cadena)
+print(regresivo50)
 
 """Invierta la siguiente lista usando el bucle for y guarde el resultado en 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
@@ -105,13 +106,11 @@ primos = []
 for i in range(37,301):
   esprimo = True
   for j in range (2,i-1):
-    #print(i, ' ',  i%j)
     if i % j == 0 :
       esprimo = False
   if esprimo:
     primos.append(i)
 
-print(primos)
 
 """Guardar en `fibonacci` una lista con los primeros 60 términos de la serie de 
 Fibonacci.
